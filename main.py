@@ -7,13 +7,13 @@ pygame.init()
 # Set up the display
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Flower Bombing")
+pygame.display.set_caption("Bomb Bombing")
 
 # Load images
-jet_image = pygame.transform.scale(pygame.image.load("jet.png"), (100, 50))  # Adjusted dimensions for jet
-flower_image = pygame.transform.scale(pygame.image.load("flower.png"), (30, 30))  # Adjusted dimensions for flower
-home_image = pygame.transform.scale(pygame.image.load("home.png"), (100, 100))  # Adjusted dimensions for home
-game_over_image = pygame.transform.scale(pygame.image.load("game_over.png"), (WIDTH, HEIGHT))  # Game over image
+jet_image = pygame.transform.scale(pygame.image.load("assets/jet.png"), (100, 50))  # Adjusted dimensions for jet
+flower_image = pygame.transform.scale(pygame.image.load("assets/flower.png"), (30, 30))  # Adjusted dimensions for flower
+home_image = pygame.transform.scale(pygame.image.load("assets/home.png"), (100, 100))  # Adjusted dimensions for home
+game_over_image = pygame.transform.scale(pygame.image.load("assets/game_over.png"), (WIDTH, HEIGHT))  # Game over image
 
 # Jet plane class
 class Jet(pygame.sprite.Sprite):
@@ -77,7 +77,7 @@ class Explosion(pygame.sprite.Sprite):
             self.last_update = now
 
 # Load explosion frames
-explosion_frames = [pygame.transform.scale(pygame.image.load(f"explosion{i}.png"), (100, 100)) for i in range(1, 6)]
+explosion_frames = [pygame.transform.scale(pygame.image.load(f"assets/explosion{i}.png"), (100, 100)) for i in range(1, 6)]
 
 # Game variables
 score = 0
